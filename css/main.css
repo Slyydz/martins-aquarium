@@ -6,6 +6,9 @@ body {
 	margin: 0;
 }
 
+
+
+
 header {
 	display: flex;
 	flex-wrap: nowrap;
@@ -50,6 +53,7 @@ nav a:active {
 .fishTank {
 	margin: 1em 0;
 	display: flex;
+	flex-direction: column;
 }
 
 .fishList{
@@ -85,3 +89,8 @@ footer {
 	color: whitesmoke;
 	text-align: center;
 }
+
+.tips-ul{
+	font-size: larger;
+}
+
