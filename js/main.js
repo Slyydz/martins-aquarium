@@ -1,5 +1,5 @@
 //import statement for fishList/ data entrys
-import { FishList } from './FishList.js';
+import { FishList } from './fish/FishList.js';
 
 //Envocation of function
 FishList();
