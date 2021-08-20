@@ -9,6 +9,10 @@ import { locationList } from "../location/locationList.js";
 import { getTips } from "../tips/tips.js";
 import { tipsList } from "../tips/tipsList.js";
 
+import { getMostHolyFish } from "./FishData.js";
+import { getSoldierFish } from "./FishData.js";
+import { getUnworthy } from "./FishData.js";
+
 export const FishList = () => {
 
     /** Define the steps that need to be taken
@@ -26,14 +30,28 @@ export const FishList = () => {
 
     const fishes = getFish();
     const tips = getTips();
+    const holyFish = getMostHolyFish();
+    const soldierFish = getSoldierFish();
+    const unworthyFish = getUnworthy();
 
-    let fishHTMLRep = "";
+    let holyFishRep = "";
+    let soldierFishRep = "";
+    let unworthyFishRep = "";
     let locationRep = "";
     let tipsRep = "";
 
-    for(const oneFromSea of fishes){
-        fishHTMLRep += Fish(oneFromSea);
-    }
+    
+    holyFish.forEach(onefromHoly => {
+        holyFishRep += Fish(onefromHoly);
+    })
+
+    soldierFish.forEach(onefromSoldier => {
+        soldierFishRep += Fish(onefromSoldier);
+    })
+    
+    unworthyFish.forEach(onefromUnworthy => {
+        unworthyFishRep += Fish(onefromUnworthy);
+    })
 
     fishes.forEach(oneFromSeaLoc => {
         locationRep += locationList(oneFromSeaLoc);
@@ -44,7 +62,11 @@ export const FishList = () => {
     })
 
     // Add to the existing HTML in the content element
-    contentElement.innerHTML += `${fishHTMLRep}`;
+    contentElement.innerHTML += `${holyFishRep}`
+
+    contentElement.innerHTML += `${soldierFishRep}`
+
+    contentElement.innerHTML += `${unworthyFishRep}`
 
     contentElementLoc.innerHTML += `${locationRep}`;
 

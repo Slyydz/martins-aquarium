@@ -10,6 +10,46 @@ export const getFish = () => {
     return fishCollection
 }
 
+export const getMostHolyFish = () => {
+    // 3, 6, 9, 12, etc... fish
+    const holyFishArray = [];
+
+    for (const holyFishCount of fishCollection) {
+        if (holyFishCount.length % 3 == 0){
+            holyFishArray.push(holyFishCount);
+        }
+    }
+
+    return holyFishArray;
+}
+
+export const getSoldierFish = () => {
+    // 5, 10, 15, 20, 25, etc... fish
+    const soldiersArray = [];
+
+    for (const soldierFishCount of fishCollection){
+        if (soldierFishCount.length % 5 == 0){
+            soldiersArray.push(soldierFishCount)
+        }
+    }
+
+    return soldiersArray
+}
+
+export const getUnworthy = () => {
+    // Any fish not a multiple of 3 or 5
+    const unworthyArray = [];
+
+    for( const unworthyFishCount of fishCollection) {
+        if(unworthyFishCount.length % 3 != 0 && unworthyFishCount.length % 5 != 0){
+            unworthyArray.push(unworthyFishCount);
+            
+        }
+    }
+
+    return unworthyArray
+}
+
 //declare fishCollection array and populate with fish objects
 const fishCollection = [
     {
@@ -62,7 +102,7 @@ const fishCollection = [
         food: "not fish",
         image: "cat.jpg",
         species: "Cat",
-        length: 130,
+        length: 20,
         waterType: "Milk",
         harvestLocation: "Sydney"
     },
