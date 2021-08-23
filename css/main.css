@@ -59,7 +59,7 @@ nav a:active {
 .fishList{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;	
+	justify-content: space-evenly;
 }
 
 .fish-card {
@@ -139,6 +139,7 @@ footer {
 aside{
 	max-width: 300;
 	background-color: whitesmoke;
+	box-shadow: 5px 10px 8px 6px #888888;
 	margin-right: 50px;
 	
 }
@@ -175,5 +176,11 @@ aside h2{
 .fishTank h2 {
 	display: flex;
 	justify-content: center;
+}
+
+footer{
+	height: 135px;
+	display: flex;
+	flex-direction: column;
 }
 
