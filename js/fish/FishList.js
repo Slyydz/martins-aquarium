@@ -8,6 +8,8 @@ import { getFish } from "./FishData.js"
 import { locationList } from "../location/locationList.js";
 import { getTips } from "../tips/tips.js";
 import { tipsList } from "../tips/tipsList.js";
+import { getQuotes } from "../quotes/quotes.js";
+import { quotesList } from "../quotes/quotesList.js";
 
 import { getMostHolyFish } from "./FishData.js";
 import { getSoldierFish } from "./FishData.js";
@@ -24,21 +26,26 @@ export const FishList = () => {
     **/
 
     // Get a reference to the `<section class="fishList">` element
-    const contentElement = document.querySelector(".fishList");
+    const contentElement = document.querySelector(".unholyList");
+    const contentElementHoly = document.querySelector(".holyList")
+    const contentElementSoldier = document.querySelector(".soldierList")
     const contentElementLoc = document.querySelector(".locationList");
     const contentElementTips = document.querySelector(".tips-ul");
+    const contentElementQuotes = document.querySelector(".quotes-ul");
 
     const fishes = getFish();
     const tips = getTips();
     const holyFish = getMostHolyFish();
     const soldierFish = getSoldierFish();
     const unworthyFish = getUnworthy();
+    const quotes = getQuotes();
 
     let holyFishRep = "";
     let soldierFishRep = "";
     let unworthyFishRep = "";
     let locationRep = "";
     let tipsRep = "";
+    let quotesRep = "";
 
     
     holyFish.forEach(onefromHoly => {
@@ -61,16 +68,22 @@ export const FishList = () => {
         tipsRep += tipsList(oneTips);
     })
 
-    // Add to the existing HTML in the content element
-    contentElement.innerHTML += `${holyFishRep}`
+    quotes.forEach(oneQuotes => {
+        quotesRep += quotesList(oneQuotes);
+    })
 
-    contentElement.innerHTML += `${soldierFishRep}`
+    // Add to the existing HTML in the content element
+    contentElementHoly.innerHTML += `${holyFishRep}`
+
+    contentElementSoldier.innerHTML += `${soldierFishRep}`
 
     contentElement.innerHTML += `${unworthyFishRep}`
 
     contentElementLoc.innerHTML += `${locationRep}`;
 
     contentElementTips.innerHTML = `${tipsRep}`
+
+    contentElementQuotes.innerHTML = `${quotesRep}`
 
 
 }
