@@ -73,17 +73,17 @@ export const FishList = () => {
     })
 
     // Add to the existing HTML in the content element
-    contentElementHoly.innerHTML += `${holyFishRep}`
+    contentElementHoly.innerHTML += holyFishRep
 
-    contentElementSoldier.innerHTML += `${soldierFishRep}`
+    contentElementSoldier.innerHTML += soldierFishRep
 
-    contentElement.innerHTML += `${unworthyFishRep}`
+    contentElement.innerHTML += unworthyFishRep
 
-    contentElementLoc.innerHTML += `${locationRep}`;
+    contentElementLoc.innerHTML += locationRep;
 
-    contentElementTips.innerHTML = `${tipsRep}`
+    contentElementTips.innerHTML = tipsRep
 
-    contentElementQuotes.innerHTML = `${quotesRep}`
+    contentElementQuotes.innerHTML = quotesRep
 
 
 }
