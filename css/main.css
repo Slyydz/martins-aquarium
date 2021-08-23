@@ -94,3 +94,86 @@ footer {
 	font-size: larger;
 }
 
+.fishList{
+	display: flex;
+	flex-direction: column;
+}
+
+.unholyList {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.holyList {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.soldierList {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.unholyContainer h3, .holyContainer h3, .soldierContainer h3{
+	display: flex;
+	justify-content: space-around;
+	font-size: larger;
+	font-weight: bolder;
+	text-decoration: underline;
+}
+
+.unholyList , .holyList , .soldierList {
+	display: flex;
+	justify-content: space-around;
+}
+
+.fish-aside{
+	display:flex;
+	flex-direction: row;
+}
+
+aside{
+	max-width: 300;
+	background-color: whitesmoke;
+	margin-right: 50px;
+	
+}
+
+aside h2{
+	display: flex;
+	justify-content: center;
+}
+
+.locationList{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 50px;
+}
+
+.tipsList{
+	padding-bottom: 50px;
+}
+
+.quotes-ul{
+	font-size: larger;
+}
+
+.quotesList{
+	padding-bottom: 75px;
+}
+
+.aside-img{
+	display: flex;
+	justify-content: center;
+}
+
+.fishTank h2 {
+	display: flex;
+	justify-content: center;
+}
+
